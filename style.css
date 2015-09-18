@@ -1,4 +1,15 @@
 
+a{color:0x0000FF !important;}
+a:hover{color:0xFF3300 !important;}
+a:visited{color:0xFFCCCC !important;}
+
+.navbar
+{
+	float:left;
+	padding:5px;
+	margin-top:20px;
+	display:block;
+}
 	body    { color:black;
 		  background-color:lightblue;
 		  font-family: "Book Antiqua";
