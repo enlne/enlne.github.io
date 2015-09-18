@@ -1,0 +1,31 @@
+
+	body    { color:black;
+		  background-color:lightblue;
+		  font-family: "Book Antiqua";
+		  font-size:25px;
+		  font-weight:900;			}
+
+	h1	{ font-size:75px;
+		  font-family:"Monotype Corsiva";	}
+
+	h2	{ font-size:40px;			}
+
+
+
+	.green	{ color:green;
+		  font-style:italic;	
+		  background-color:white;		}
+
+
+	.lblue	{ color:skyblue;
+		  font-style:italic;	}
+
+	.dblue	{ color:darkblue;
+		  font-style:italic;	}
+
+	.italic	{ color:black;
+		  font-style:italic;	}
+
+	ol	{ list-style-type:disc;			}
+
+
