@@ -5,16 +5,15 @@ a:visited{color:0xFFCCCC !important;}
 
 .navbar
 {
-	float:left;
 	padding:5px;
 	margin-top:20px;
 	display:block;
 }
 body    { color:black;
 	background-color:lightblue;
-	font-family: "Times New Roman";
+	font-family: "Book Antiqua";
 	font-size:20px;
-	font-weight:900;			}
+	font-weight:700;			}
 
 h1	{ font-size:75px;
 	font-family:"Monotype Corsiva";	}
@@ -24,11 +23,15 @@ h2	{ font-size:40px;
 		
 	}
 
+.name
+{ font-size:75px;
+	font-family:"Monotype Corsiva";	}
 
-
-.green	{ color:green;
-		  font-style:italic;	
-		  background-color:white;		}
+.nameSmall
+{ font-size:40px;	
+	font-family:"Monotype Corsiva";
+		
+	}
 
 .lblue	{ color:skyblue;
 		  font-style:italic;	}
