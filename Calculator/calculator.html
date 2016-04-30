@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../style.css" />
 <title>The Calculator of Randomness</title>
 <script type="text/JavaScript">
 	var Number=0
@@ -7,26 +9,43 @@
 </head>
 
 <body onLoad="document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
-<h1>Calculator (to be updated)~</h1>
-Change the colors
+
+<span class="name">Ellen Ni</span>
+<br/>
+<span class="nameSmall">= ln e = 1</span>
+
+<center>
+<span class="navbar">
+	<a href="../index.html">Home</a>
+	<a href="../aboutme.html">About Me</a>
+	<a href="../resume_v2.pdf">R&eacute;sum&eacute;</a>
+	<a href="calculator.html">Calculator</a>
+</span>
+</center>
+
+
  <form name=frmCalc>
   <table>
    <tr>
 	<td>Background Color</td>
 	<td><select name=slctBGColor>
+		<option>skyblue
 		<option>black
 		<option>navy
 		<option>darkred
 		<option>darkgreen
+		<option>purple
 				</select></td>
    </tr>
    <tr>
 	<td>Font Color</td>
 	<td><select name=slctFontColor>
+		<option>black
 		<option>white
 		<option>skyblue
 		<option>lavender
 		<option>goldenrod
+		<option>lightgreen
 				</select></td>
    </tr>
    <tr>
@@ -34,25 +53,11 @@ Change the colors
 	<td><input type=button name=btnColor value="Change colors" onClick="document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
    </tr>
    <tr>
-	<td>Instructions</td>
-	<td>Below are two text boxes for entering NUMBERS.<br/>
-	Use the number keys on your keyboard <br/>
-	or the Number Pads provided on the screen.<br/>
-	Then click on the opperation you want.<br/>
-	The answer will appear in the 2 other text boxes.<br/>
-	The complex functions will only affect the Modified Answer.<br/>
-	Use the Clear all button to clear <i>everything</i>.</td>
-   </tr>
-   <tr>
 	<td>Basic:</td>
 	<td><input type=text name=txtNum1 size=10>
 	<td><input type=text name=txtNum2 size=10>
-	<img src="add.jpg" name=btnAdd onMouseOver="this.src='addOn.jpg'" onMouseOut="this.src='add.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) + parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
-	<img src="minus.jpg" name=btnSubtract onMouseOver="this.src='minusOn.jpg'" onMouseOut="this.src='minus.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) - parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
-	<img src="times.jpg" name=btnMultiply onMouseOver="this.src='timesOn.jpg'" onMouseOut="this.src='times.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) * parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
-	<img src="divide.jpg" name=btnDivide onMouseOver="this.src='divideOn.jpg'" onMouseOut="this.src='divide.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) / parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number"></td>
-	</td>
    </tr>
+   
    <tr>
 	<td>Number Pads:</td>
 	<td>First Number:<br/>
@@ -82,6 +87,17 @@ Change the colors
 	<input type=button name=btnNum2 value=" . " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '.'">
 	<input type=button name=btnNum2C value=" C " onClick="frmCalc.txtNum2.value=''"></td>
    </tr>
+
+   <tr>
+	<td></td>
+	<td>	
+	<img src="add.jpg" name=btnAdd onMouseOver="this.src='addOn.jpg'" onMouseOut="this.src='add.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) + parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="minus.jpg" name=btnSubtract onMouseOver="this.src='minusOn.jpg'" onMouseOut="this.src='minus.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) - parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="times.jpg" name=btnMultiply onMouseOver="this.src='timesOn.jpg'" onMouseOut="this.src='times.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) * parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="divide.jpg" name=btnDivide onMouseOver="this.src='divideOn.jpg'" onMouseOut="this.src='divide.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) / parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number"></td>
+	</td>
+   </tr>
+
    <tr>
 	<td>Answer:</td>
 	<td><input type=text name=txtAnswer size=20></td>
@@ -92,6 +108,10 @@ Change the colors
 	<img src="SecondPwr.jpg" name=btnSecondPower onMouseOver="this.src='SecondPwrOn.jpg'" onMouseOut="this.src='SecondPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 2); frmCalc.txtModAnswer.value=Number">
 	<img src="FifthPwr.jpg" name=btnFifthPower onMouseOver="this.src='FifthPwrOn.jpg'" onMouseOut="this.src='FifthPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 5); frmCalc.txtModAnswer.value=Number">
 	<img src="TenthRound.jpg" name=btnRoundTenth onMouseOver="this.src='TenthRoundOn.jpg'" onMouseOut="this.src='TenthRound.jpg'" onClick="Number=Math.round(10 * parseFloat(Number))/10; frmCalc.txtModAnswer.value=Number">
+	</td>
+   </tr>
+   <tr>
+	<td></td><td>
 	<img src="HundredthRound.jpg" name=btnRoundHundredth onMouseOver="this.src='HundredthRoundOn.jpg'" onMouseOut="this.src='HundredthRound.jpg'" onClick="Number=Math.round(100 * parseFloat(Number))/100; frmCalc.txtModAnswer.value=Number">
 	<img src="ThousandthRound.jpg" name=btnRoundThousandth onMouseOver="this.src='ThousandthRoundOn.jpg'" onMouseOut="this.src='ThousandthRound.jpg'" onClick="Number=Math.round(1000 * parseFloat(Number))/1000; frmCalc.txtModAnswer.value=Number">
 	<img src="Abs.jpg" name=btnAbsolute onMouseOver="this.src='AbsOn.jpg'" onMouseOut="this.src='Abs.jpg'" onClick="Number=Math.abs(parseFloat(Number)); frmCalc.txtModAnswer.value=Number"></td>
