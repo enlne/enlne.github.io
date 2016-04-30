@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>The Calculator of Randomness</title>
+<script type="text/JavaScript">
+	var Number=0
+</script>
+</head>
+
+<body onLoad="document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
+<h1>Calculator (to be updated)~</h1>
+Change the colors
+ <form name=frmCalc>
+  <table>
+   <tr>
+	<td>Background Color</td>
+	<td><select name=slctBGColor>
+		<option>black
+		<option>navy
+		<option>darkred
+		<option>darkgreen
+				</select></td>
+   </tr>
+   <tr>
+	<td>Font Color</td>
+	<td><select name=slctFontColor>
+		<option>white
+		<option>skyblue
+		<option>lavender
+		<option>goldenrod
+				</select></td>
+   </tr>
+   <tr>
+	<td><hr width=100%/></td>
+	<td><input type=button name=btnColor value="Change colors" onClick="document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
+   </tr>
+   <tr>
+	<td>Instructions</td>
+	<td>Below are two text boxes for entering NUMBERS.<br/>
+	Use the number keys on your keyboard <br/>
+	or the Number Pads provided on the screen.<br/>
+	Then click on the opperation you want.<br/>
+	The answer will appear in the 2 other text boxes.<br/>
+	The complex functions will only affect the Modified Answer.<br/>
+	Use the Clear all button to clear <i>everything</i>.</td>
+   </tr>
+   <tr>
+	<td>Basic:</td>
+	<td><input type=text name=txtNum1 size=10>
+	<td><input type=text name=txtNum2 size=10>
+	<img src="add.jpg" name=btnAdd onMouseOver="this.src='addOn.jpg'" onMouseOut="this.src='add.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) + parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="minus.jpg" name=btnSubtract onMouseOver="this.src='minusOn.jpg'" onMouseOut="this.src='minus.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) - parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="times.jpg" name=btnMultiply onMouseOver="this.src='timesOn.jpg'" onMouseOut="this.src='times.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) * parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="divide.jpg" name=btnDivide onMouseOver="this.src='divideOn.jpg'" onMouseOut="this.src='divide.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) / parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number"></td>
+	</td>
+   </tr>
+   <tr>
+	<td>Number Pads:</td>
+	<td>First Number:<br/>
+	<input type=button name=btnNum11 value=" 1 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '1'">
+	<input type=button name=btnNum12 value=" 2 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '2'">
+	<input type=button name=btnNum13 value=" 3 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '3'"><br/>
+	<input type=button name=btnNum14 value=" 4 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '4'">
+	<input type=button name=btnNum15 value=" 5 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '5'">
+	<input type=button name=btnNum16 value=" 6 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '6'"><br/>
+	<input type=button name=btnNum17 value=" 7 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '7'">
+	<input type=button name=btnNum18 value=" 8 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '8'">
+	<input type=button name=btnNum19 value=" 9 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '9'"><br/>
+	<input type=button name=btnNum10 value=" 0 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '0'">
+	<input type=button name=btnNum1 value=" . " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '.'">
+	<input type=button name=btnNum1C value=" C " onClick="frmCalc.txtNum1.value=''"></td>
+	<td>Second Number:<br/>
+	<input type=button name=btnNum21 value=" 1 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '1'">
+	<input type=button name=btnNum22 value=" 2 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '2'">
+	<input type=button name=btnNum23 value=" 3 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '3'"><br/>
+	<input type=button name=btnNum24 value=" 4 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '4'">
+	<input type=button name=btnNum25 value=" 5 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '5'">
+	<input type=button name=btnNum26 value=" 6 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '6'"><br/>
+	<input type=button name=btnNum27 value=" 7 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '7'">
+	<input type=button name=btnNum28 value=" 8 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '8'">
+	<input type=button name=btnNum29 value=" 9 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '9'"><br/>
+	<input type=button name=btnNum20 value=" 0 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '0'">
+	<input type=button name=btnNum2 value=" . " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '.'">
+	<input type=button name=btnNum2C value=" C " onClick="frmCalc.txtNum2.value=''"></td>
+   </tr>
+   <tr>
+	<td>Answer:</td>
+	<td><input type=text name=txtAnswer size=20></td>
+   </tr>
+   <tr>
+	<td>Complex:</td>
+	<td><img src="SqRt.jpg" name=btnSqRt onMouseOver="this.src='SqRtOn.jpg'" onMouseOut="this.src='SqRt.jpg'" onClick="Number=Math.sqrt(parseFloat(Number)); frmCalc.txtModAnswer.value=Number">
+	<img src="SecondPwr.jpg" name=btnSecondPower onMouseOver="this.src='SecondPwrOn.jpg'" onMouseOut="this.src='SecondPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 2); frmCalc.txtModAnswer.value=Number">
+	<img src="FifthPwr.jpg" name=btnFifthPower onMouseOver="this.src='FifthPwrOn.jpg'" onMouseOut="this.src='FifthPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 5); frmCalc.txtModAnswer.value=Number">
+	<img src="TenthRound.jpg" name=btnRoundTenth onMouseOver="this.src='TenthRoundOn.jpg'" onMouseOut="this.src='TenthRound.jpg'" onClick="Number=Math.round(10 * parseFloat(Number))/10; frmCalc.txtModAnswer.value=Number">
+	<img src="HundredthRound.jpg" name=btnRoundHundredth onMouseOver="this.src='HundredthRoundOn.jpg'" onMouseOut="this.src='HundredthRound.jpg'" onClick="Number=Math.round(100 * parseFloat(Number))/100; frmCalc.txtModAnswer.value=Number">
+	<img src="ThousandthRound.jpg" name=btnRoundThousandth onMouseOver="this.src='ThousandthRoundOn.jpg'" onMouseOut="this.src='ThousandthRound.jpg'" onClick="Number=Math.round(1000 * parseFloat(Number))/1000; frmCalc.txtModAnswer.value=Number">
+	<img src="Abs.jpg" name=btnAbsolute onMouseOver="this.src='AbsOn.jpg'" onMouseOut="this.src='Abs.jpg'" onClick="Number=Math.abs(parseFloat(Number)); frmCalc.txtModAnswer.value=Number"></td>
+   </tr>
+   <tr>
+	<td>Modified Answer:</td>
+	<td><input type=text name=txtModAnswer size=20></td>
+   </tr>
+   <tr>
+	<td><img src="ClearAll.jpg" name=btnClearAll onMouseOver="btnClearAll.src='ClearAllHover.jpg'" onMouseOut="this.src='ClearAll.jpg'" onClick="frmCalc.txtNum1.value='';frmCalc.txtNum2.value='';frmCalc.txtAnswer.value='';frmCalc.txtModAnswer.value='';Number=0">
+   </tr>
+  <table>
+ </form>
+</body>
+</html>
