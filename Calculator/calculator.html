@@ -5,6 +5,12 @@
 <title>The Calculator of Randomness</title>
 <script type="text/JavaScript">
 	var Number=0
+function secret(num1, num2, num3)
+{
+	if (num3==12 || (num1==12 && num2==12)) alert("The third part is c");
+	else alert("Nope");
+	
+}
 </script>
 </head>
 
@@ -89,7 +95,7 @@
    <tr>
 	<td></td>
 	<td>	
-	<img src="add.jpg" name=btnAdd onMouseOver="this.src='addOn.jpg'" onMouseOut="this.src='add.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) + parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
+	<img src="add.jpg" name=btnAdd onMouseOver="this.src='addOn.jpg'" onMouseOut="this.src='add.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) + parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number";>
 	<img src="minus.jpg" name=btnSubtract onMouseOver="this.src='minusOn.jpg'" onMouseOut="this.src='minus.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) - parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
 	<img src="times.jpg" name=btnMultiply onMouseOver="this.src='timesOn.jpg'" onMouseOut="this.src='times.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) * parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number">
 	<img src="divide.jpg" name=btnDivide onMouseOver="this.src='divideOn.jpg'" onMouseOut="this.src='divide.jpg'" onClick="Number=parseFloat(frmCalc.txtNum1.value) / parseFloat(frmCalc.txtNum2.value); frmCalc.txtAnswer.value=Number;frmCalc.txtModAnswer.value=Number"></td>
@@ -112,7 +118,10 @@
 	<td></td><td>
 	<img src="HundredthRound.jpg" name=btnRoundHundredth onMouseOver="this.src='HundredthRoundOn.jpg'" onMouseOut="this.src='HundredthRound.jpg'" onClick="Number=Math.round(100 * parseFloat(Number))/100; frmCalc.txtModAnswer.value=Number">
 	<img src="ThousandthRound.jpg" name=btnRoundThousandth onMouseOver="this.src='ThousandthRoundOn.jpg'" onMouseOut="this.src='ThousandthRound.jpg'" onClick="Number=Math.round(1000 * parseFloat(Number))/1000; frmCalc.txtModAnswer.value=Number">
-	<img src="Abs.jpg" name=btnAbsolute onMouseOver="this.src='AbsOn.jpg'" onMouseOut="this.src='Abs.jpg'" onClick="Number=Math.abs(parseFloat(Number)); frmCalc.txtModAnswer.value=Number"></td>
+	<img src="Abs.jpg" name=btnAbsolute onMouseOver="this.src='AbsOn.jpg'" onMouseOut="this.src='Abs.jpg'" onClick="Number=Math.abs(parseFloat(Number)); frmCalc.txtModAnswer.value=Number">
+	<img src="secret.jpg" name =btnSecret onMouseOver="this.src='secretOn.jpg'" onMouseOut="this.src='secret.jpg'"
+onClick="secret(frmCalc.txtNum1.value,frmCalc.txtNum2.value,frmCalc.txtAnswer.value)";</td>
+	
    </tr>
    <tr>
 	<td>Modified Answer:</td>

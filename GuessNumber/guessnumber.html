@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel=stylesheet type=text/css href=../style.css>
-<title>I am thinking of a number... Game</title>
+<title>Thinking of a Number Game</title>
 <script>
   var compNum //the # the user must guess
   var winNum=0 //the # of times the user won
@@ -20,11 +20,19 @@
 	compNum=Math.floor(Math.random()*100)+1;
 	
   }
+
+  function secret()
+  {
+	alert("The fifth part is 3");
+  }
+
   function checkGuessNum(frmTemp)
   {
 	
 	if(guesses<6)
-	{
+	{	
+		var guess=eval(frmTemp.txtGuess.value);
+		if (guess==12) secret();
 		return;
 	}
 	

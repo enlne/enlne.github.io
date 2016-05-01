@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../style.css" />
+<script>
+var numSides=0;
+var numDice=0;
+var arrResults=new Array(0,1,2);
+var sum=0;
+var ave=0;
+
+function rollDice(frmTemp)
+{
+	Results.innerHTML="";
+	numSides=frmTemp.txtSides.value;
+	numDice=frmTemp.txtDice.value;
+	secret();
+	arrResults=new Array();
+	sum=0;
+	var tempDie =0;
+	for (i=0;i<numDice;i++)
+	{
+		tempDie=Math.floor(Math.random()*numSides)+1;
+		arrResults[i]=tempDie;
+		sum+=tempDie;
+	}
+	ave = 1.0 * sum / numDice;
+	printResults(frmTemp);
+}
+
+function printResults(frmTemp)
+{
+	Results.innerHTML+="Results: <br/>";
+	for (i=0; i<numDice; i++)
+	{
+		Results.innerHTML+=" "+arrResults[i];
+	}
+	Results.innerHTML+="<br/>Sum: " + sum + " Ave: "+ave;
+
+}
+
+function secret()
+{
+	if (numSides==12 && numDice==12) Results.innerHTML+="The fourth part is R<br/>";
+}
+
+</script>
+</head>
+
+<body>
+<form name=frmDice>
+<img src="../Logo.png">
+
+<center>
+<span class="navbar">
+	<a href="../index.html">Home</a>
+	<a href="../aboutme.html">About Me</a>
+	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
+	<a href="../things.html">Things</a>
+</span>
+</center>
+
+<h2>Dice Roller</h2>
+
+<br/>
+
+# of sides: <input type=text name=txtSides size=5 maxlength=3 />  
+# of dice: <input type=text name=txtDice size=5 maxlength=3 />  
+<input type=button name=btnRoll value="Roll" onClick="rollDice(frmDice)" />
+<br/><br/>
+<div id=Results> [dice results here] 
+</div>
+
+</form>
+</body>
+</html>
