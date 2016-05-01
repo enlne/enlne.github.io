@@ -68,14 +68,14 @@
   {
 		checkGuessValid(frmGame);
 		var guess=eval(frmTemp.txtGuess.value);
-		if(compNum>guess)
+		if(compNum>guess&&guess<100&&guess>1)
 		{
 			alert("Your guess is too low.");
 			guesses=guesses + 1;
 			frmTemp.txtGuessTotal.value=guesses;
 			checkGuessNum(frmGame);
 		}
-		else if(compNum<guess)
+		else if(compNum<guess&&guess<100&&guess>1)
 		{
 			alert("Your guess is too high.");
 			guesses=guesses + 1;

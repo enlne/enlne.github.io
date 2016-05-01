@@ -1,0 +1,326 @@
+<html><!--Created by Ellen Ni-->
+<head>
+<link rel=stylesheet type=text/css href=../style.css>
+<title>Skunk Game</title>
+<script type="text/JavaScript">
+var pic1=0	//Player 1's picture
+var pic2=0	//Player 2's picture
+var pts1=0	//Player 1's score
+var pts2=0	//Player 2's score
+var ptsH=0	//Point holder--keeps track of points in one round
+var die1=1
+var die2=1
+var whoseTurn=1
+var a1		//Player 1's avatar
+var a2		//Player 2's avatar
+var act1=false	//this will keep track if the player rolled the die at least once
+var gameWon=false
+
+
+
+var DR1=new Array("blah","1d1.jpg","1d2.jpg","1d3.jpg","1d4.jpg","1d5.jpg","1d6.jpg")
+var DR2=new Array("blah","2d1.jpg","2d2.jpg","2d3.jpg","2d4.jpg","2d5.jpg","2d6.jpg")
+//DR means dice result
+
+
+
+
+
+
+
+
+function avatarChange()	//This function makes the players choose their avatars
+{	
+	var av1=window.prompt("Player 1: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");	//Player 1's avatar
+	a1=av1;
+	var av2=window.prompt("Player 2: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");	//Player 2's avatar
+	a2=av2;
+	p1Turn(av1);
+	
+}
+
+function p1Turn()	//this function shows when it's player 1's turn
+{
+	player.innerHTML="It's Player 1's turn!"
+
+	if(a1=="1" || a1==1)
+	{
+		document.imgPlayer.src="pika.bmp"
+	}
+	else if(a1=="2" || a1==2)
+	{
+		document.imgPlayer.src="mudkip.bmp"
+	}
+	else if(a1=="3" || a1==3)
+	{
+		document.imgPlayer.src="stunfisk.bmp"
+	}
+	else
+	{
+		document.imgPlayer.src="fail.bmp"
+	}
+}
+
+
+function p2Turn()	//this function shows when it is player 2's turn
+{
+	player.innerHTML="It's Player 2's turn!"
+	
+	if(a2=="1" || a2==1)
+	{
+		document.imgPlayer.src="pika2.bmp"
+	}
+	else if(a2=="2" || a2==2)
+	{
+		document.imgPlayer.src="mudkip2.bmp"
+	}
+	else if(a2=="3" || a2==3)
+	{
+		document.imgPlayer.src="stunfisk2.bmp"
+	}
+	else
+	{
+		document.imgPlayer.src="fail2.bmp"
+	}
+}
+
+function showInstructions()	//self-explanatory
+{
+	Instructions.innerHTML="To win this game, you roll the dice to try to be the first to get to 100 points. To do this, press the button that says \"Roll Dice.\" There is also a button that says \"Pass Turn,\" which will allow you to end your turn and put your winnings for the round into your total points. Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round, and your turn automatically ends. If you get 2 skunks, your TOTAL points are reset to zero.<br/>Good luck ;) "
+}
+
+function hideInstructions()	//see above
+{
+	Instructions.innerHTML=""
+}
+
+function rollDice()	//this function rolls the dice (goes to rollResult)
+{
+	if(gameWon)
+	{
+		alert("A player has already won! Reset the game to play again. The button is on the bottom of the page.")
+	}
+	else
+	{
+		act1=true
+		die1=Math.floor(Math.random()*6)+1;
+		die2=Math.floor(Math.random()*6)+1;
+		rollResult();
+	}
+}
+
+function rollResult()	//responds to rollDice (goes to changeDieFace &| passTurn)
+{
+	if(die1==1 && die2==1)
+	{
+		ptsH=0
+		if(whoseTurn=1)
+		{
+			pts1=0
+		}
+		else if(whoseTurn=2)
+		{
+			pts2=0
+		}
+		changeDieFace()
+		alert("Bad luck! You got two skunks! Ouch!")
+		passTurn()
+	}
+	else if(die1==1 || die2==1)
+	{
+		changeDieFace()
+		ptsH=0
+		alert("Bad luck! You got a skunk!")
+		passTurn()
+	}
+	else
+	{
+		changeDieFace()
+		ptsH=ptsH+die1+die2
+		Messages.innerHTML="It is still your turn. Roll the dice or pass."
+		pointsThisRound.innerHTML=ptsH
+		checkScore()
+	}
+
+
+}
+
+function changeDieFace()	//from rollResult; changes the face of the die
+{
+	document.firstdie.src=DR1[die1];
+	document.seconddie.src=DR2[die2];
+
+}
+
+
+
+function passTurn()	//either called by SKUNK or pressing button
+{
+	if(gameWon)
+	{
+		alert("A player has already won! Reset the game to play again. The button is on the bottom of the page.")
+	}
+	else if(!(act1))
+	{
+		window.alert("You must roll the dice at least once.")
+	}
+	
+	else if(whoseTurn==1)
+	{
+	pts1=pts1+ptsH
+	Score1.innerHTML="Player 1: " + pts1
+	whoseTurn=2
+	pointsThisRound.innerHTML=0
+	p2Turn()
+	Messages.innerHTML="It is Player 2's turn. Roll the dice."
+	act1=false
+	ptsH=0
+	
+	}
+
+	else if(whoseTurn==2)
+	{
+	pts2=pts2+ptsH
+	Score2.innerHTML="Player 2: " + pts2
+	whoseTurn=1
+	pointsThisRound.innerHTML=0
+	p1Turn()
+	Messages.innerHTML="It is Player 1's turn. Roll the dice."
+	act1=false
+	ptsH=0
+
+	}
+
+}
+
+function checkScore()	//sees if a player has won 
+{
+	if(gameWon)
+	{
+		alert("A player has already won! Reset the game to play again. The button is on the bottom of the page.")
+		Messages.innerHTML="Reset the game to play again. The button is on the bottom of the page."
+		return;
+	}
+
+	else if(whoseTurn==1 && pts1+ptsH >= 100)
+	{
+		alert("Player 1 has won!")
+		gameWon=true
+		Messages.innerHTML="Player One has won!"
+		pts1=pts1+ptsH
+		Score1.innerHTML="Player 1: " + pts1 +" WINNER!!!"
+	}
+
+	else if(whoseTurn==2 && pts2+ptsH >= 100)
+	{
+		alert("Player 2 has won!")
+		gameWon=true
+		Messages.innerHTML="Player Two has won!"
+		pts2=pts2+ptsH
+		Score2.innerHTML="Player 2: " + pts2+" WINNER!!!"
+	}
+
+
+
+}
+
+
+
+
+
+
+function resetGame()	//resets the game!
+{
+pic1=0	
+pic2=0	
+pts1=0	
+pts2=0	
+ptsH=0	
+die1=1
+die2=1
+whoseTurn=1		
+act1=false	
+gameWon=false
+showInstructions()
+Messages.innerHTML="It is Player 1's turn. Roll the dice."
+Score1.innerHTML="Player 1: 0"
+Score2.innerHTML="Player 2: 0"
+
+
+avatarChange()
+
+
+}
+
+
+
+
+
+
+</script>
+</head>
+
+<body onLoad="avatarChange()">
+<form name=frmGame>
+
+<img src="../Logo.png">
+
+<center>
+<span class="navbar">
+	<a href="../index.html">Home</a>
+	<a href="../aboutme.html">About Me</a>
+	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
+	<a href="../things.html">Things</a>
+</span>
+</center>
+
+
+<center>
+<h2>Skunk Game</h2>
+<div id=Instructions>
+To win this game, you roll the dice to try to be the first to get to 100 points. To do this, press the button that says "Roll Dice." There is also a button that says "Pass Turn," which will allow you to end your turn and put your winnings for the round into your total points. Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round, and your turn automatically ends. If you get 2 skunks, your TOTAL points are reset to zero.<br/>Good luck ;)
+</div>
+
+<input type=button name=btnSI value="Show Instructions" onClick="showInstructions()">
+<input type=button name=btnHI value="Hide Instructions" onClick="hideInstructions()">
+
+<hr width=95% />
+
+<div id=player>It's Player 1's turn!</div>
+<br/>
+<img src="1d1.jpg" name=imgPlayer>
+
+<hr width=95% />
+Points this round: 
+<div id=pointsThisRound>0</div>
+
+<img src="1d1.jpg" name=firstdie> <img src="2d1.jpg" name=seconddie>
+<br/>
+<input type=button name=btnRD value="Roll Dice" onClick="rollDice()">
+<input type=button name=btnPT value="Pass Turn" onClick="passTurn()">
+<br/>
+
+<hr width=95% />
+
+<div id=Messages>
+It is Player 1's turn. Roll the dice.
+</div>
+
+<hr width=95% />
+
+<div id=Score1>
+Player 1: 0 
+</div>
+<div id=Score2>
+Player 2: 0
+</div>
+
+<hr width=95% />
+
+<input type=button name=btnReset value="Reset the game" onClick="resetGame()">
+
+
+</center>
+</form>
+</body>
+</html>
