@@ -1,0 +1,189 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href=../style.css>
+<title>I am thinking of a number... Game</title>
+<script>
+  var compNum //the # the user must guess
+  var winNum=0 //the # of times the user won
+  var lossNum=0 //the # of times the user lost
+  var playNum=0 //the # of times the user played the game
+  var guesses=0 //the # of times the user has guessed the round
+  var winTries=0 //the # of times the user has guessed in winning rounds
+  var allTries=0 //the # of times the user has guesses in all rounds
+  var winAve=0 //the average # of times the user guessed to win in winning rounds
+  var allAve=0 //the average # of times the user guessed to win in all rounds
+  function startGame(frmTemp)
+  {
+	guesses=0;
+	frmTemp.txtGuessTotal.value=guesses;
+	frmTemp.txtGuess.value="";
+	compNum=Math.floor(Math.random()*100)+1;
+	
+  }
+  function checkGuessNum(frmTemp)
+  {
+	
+	if(guesses<6)
+	{
+		return;
+	}
+	
+	else
+	{
+		allTries=allTries + guesses
+		alert("You have run out of guesses! You lose!");
+		playNum=playNum+1;
+		frmTemp.txtPlays.value=playNum;
+		lossNum=lossNum+1;
+		frmTemp.txtLosses.value=lossNum;
+		allAve=allTries/playNum;
+		frmTemp.txtAveAll.value=allAve;
+		alert("Automatically starting new round...");
+		startGame(frmGame);
+		
+	}
+		
+  }
+  function checkGuessValid(frmTemp)
+  {
+	if (isNaN(frmTemp.txtGuess.value)==true)
+		{
+			alert("Your guess is not a number! Pick a number from 1-100!");
+		}
+	else if (eval(frmTemp.txtGuess.value)>100)
+		{
+			alert("Your guess is over 100! Pick a number from 1-100!");
+		}
+	else if (eval(frmTemp.txtGuess.value)<1)
+		{
+			alert("Your guess is under 1! Pick a number from 1-100!");
+		}
+	else
+		{
+			return;
+		}
+  }
+
+  function checkGuess(frmTemp)
+  {
+		checkGuessValid(frmGame);
+		var guess=eval(frmTemp.txtGuess.value);
+		if(compNum>guess)
+		{
+			alert("Your guess is too low.");
+			guesses=guesses + 1;
+			frmTemp.txtGuessTotal.value=guesses;
+			checkGuessNum(frmGame);
+		}
+		else if(compNum<guess)
+		{
+			alert("Your guess is too high.");
+			guesses=guesses + 1;
+			frmTemp.txtGuessTotal.value=guesses;
+			checkGuessNum(frmGame);
+		}
+		else if(compNum==guess)
+		{
+			guesses=guesses+1;
+			alert("Congratulations! You are correct!");
+			winNum=winNum + 1;	
+			frmTemp.txtWins.value=winNum;
+			playNum=playNum+1;
+			frmTemp.txtPlays.value=playNum;
+			allTries=allTries+guesses;
+			allAve=allTries/playNum;
+			frmTemp.txtAveAll.value=allAve;
+			winTries=winTries+guesses;
+			winAve=winTries/winNum;
+			frmTemp.txtAveWin.value=winAve;
+			alert("Automatically starting new round...")
+			startGame(frmGame);
+		}
+		
+  }
+
+  function confirmReset(frmTemp)
+  {
+	var formReset=window.confirm("Are you sure you want to reset the entire game? Your Wins and Losses and Number of Plays and ALL other values will be wiped away.")
+
+	if (formReset)
+	{
+		compNum="";
+		winNum=0;
+		lossNum=0;
+		playNum=0;
+		guesses=0;
+		winTries=0;
+		winAve=0;
+		allAve=0;
+		allTries=0;
+		showInfo();
+		frmTemp.reset();
+	}
+	else
+	{
+		alert("Very well then. The form has not been reset.");
+	}
+  }
+  function hideInfo()
+  {
+	textInfo.innerHTML=""
+  }
+  function showInfo()
+  {
+	textInfo.innerHTML="Instructions: You have 6 guesses to guess a random computer generated number from 1-100. After each guess you will be told if your guess is right or wrong. If it is wrong, you will be told to guess higher or guess lower. Click the START button to begin the game. Once the game has begun, you do not need to click the START button again."
+  }
+</script>
+</head>
+
+
+<body>
+<form name=frmGame>
+<img src="../Logo.png">
+
+<center>
+<span class="navbar">
+	<a href="../index.html">Home</a>
+	<a href="../aboutme.html">About Me</a>
+	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
+	<a href="../things.html">Things</a>
+</span>
+</center>
+
+</br>
+<div id=textInfo>	Instructions: You have 6 guesses to guess a random computer generated number from 1-100. After each guess you will be told if your guess is right or wrong. If it is wrong, you will be told to guess higher or guess lower. Click the START button to begin the game. Once the game has begun, you do not need to click the START button again.
+</div>
+<input type=button name=btnHideInfo value="Hide Instructions" onClick="hideInfo()" />
+<input type=button name=btnShowInfo value="Show Instructions" onClick="showInfo()" />
+<br/>
+	<input type=button name=btnStart value="START" onClick="startGame(frmGame)" />
+<br/>
+	Guess: <input type=text name=txtGuess size=5 maxlength=3 /> 
+	<input type=button name=btnCheck value="Check guess" onClick="checkGuess(frmGame)" />
+<br/>
+	# of Guesses: <input type=text name=txtGuessTotal value="0" size=5 /> out of 6
+<br/>
+	Wins:<input type=text name=txtWins size=5 value="0" />
+	Losses:<input type=text name=txtLosses size=5 value="0" />
+	Number of Plays:<input type=text name=txtPlays size=5 value="0" />
+<br/>
+	Average Number of Tries it took you to Win (counted only when you win):<input type=text name=txtAveWin size=5 value=""/>
+<br/>
+Average Number of Tries it took you to Win (counted whether you win or lose):<input type=text name=txtAveAll size=5 value=""/>
+<br/>
+<input type=button name=btnReset value="Reset ALL" onClick="confirmReset(frmGame)" />
+<br/>
+<input type=button name=btnCheat value="Cheat" onClick="window.alert(compNum)" />
+
+
+
+
+
+
+
+
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,149 @@
+Project #3 
+
+M256 Computer Programming 
+
+I’m thinking of a number … 
+
+ 
+
+Using HTML and JavaScript, write a program that will generate a random integer between 1 and 100 then 
+have the user guess the number. Give clues to help the user guess. 
+
+ 
+
+Specific Requirements: 
+
+ 
+
+1. On the web page, include the following: 
+
+
+ 
+
+a. Clear instructions for the user on how to play the game. 
+
+
+ 
+
+b. A button for the user to click to start the game. 
+
+
+ 
+
+c. A button for the user to click to check his guess for the current round. 
+
+
+ 
+
+d. A button for the user to start the game over (use a confirm box). Be sure to reset 
+all values (including totals). 
+
+
+ 
+
+e. A textbox to display the number of guesses in the current round. 
+
+
+ 
+
+f. A textbox to display the number of rounds played. 
+
+
+ 
+
+g. A textbox to display the number of rounds won. 
+
+
+ 
+
+h. A textbox to display the average number of tries it takes the user to guess the 
+number correctly. 
+
+
+ 
+
+2. Do all processing in functions. 
+
+
+ 
+
+3. Generate a random integer between 1 and 100 for the user to guess. 
+
+
+ 
+
+4. If the user guesses the correct number, display an appropriate ‘congratulations’ 
+message and update all totals accordingly. 
+
+
+ 
+
+5. If the user guesses incorrectly, display an appropriate message to tell the user to 
+guess higher or lower the next time, then update all totals accordingly. 
+
+
+ 
+
+6. Only allow 6 guesses (if the user is wrong on the 6th guess, he ‘loses’ the game). 
+
+
+ 
+
+7. When the user ‘wins’, automatically generate a new number to play again (be sure to 
+clear the ‘number of guesses’ textbox and any necessary variables). Let the user 
+know a new round has been started. 
+
+
+ 
+
+8. For each round, keep track of the number of times the user guesses and display this in 
+the appropriate textbox. 
+
+
+ 
+
+9. Throughout the game, keep track of and display an average number of tries it takes 
+the person to guess correctly. 
+
+
+ 
+
+10. Display the number of rounds the player has won in the appropriate textbox. 
+
+
+ 
+
+11. Include appropriate comments in your source code. 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+Possible enhancements: 
+
+-Don’t let the user guess the same number twice (alert them that they’ve already guessed that 
+number) 
+
+-Custom buttons 
+
+-Use innerHTML instead of textboxes to display the results for the game 
+
+-Other ideas??? 
+
+ 
+
+Due date: __________________________ 
+
+
