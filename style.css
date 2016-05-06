@@ -9,8 +9,11 @@ a:visited{color:0xFFCCCC !important;}
 	margin-top:20px;
 	display:block;
 }
-body    { color:black;
-	background-color:lightblue;
+body    { color:skyblue;
+	background-color:black;	
+	background-image: url("carolBG.jpg");
+	background-attachment: fixed;
+	background-repeat:no-repeat;
 	font-family: "Book Antiqua";
 	font-size:20px;
 	font-weight:700;			}

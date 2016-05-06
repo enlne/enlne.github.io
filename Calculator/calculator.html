@@ -30,7 +30,7 @@ function secret(num1, num2, num3)
 
  <form name=frmCalc>
   <table>
-   <tr>
+<!--   <tr>
 	<td>Background Color</td>
 	<td><select name=slctBGColor>
 		<option>lightblue
@@ -40,13 +40,13 @@ function secret(num1, num2, num3)
 		<option>darkgreen
 		<option>purple
 				</select></td>
-   </tr>
+   </tr> -->
    <tr>
 	<td>Font Color</td>
 	<td><select name=slctFontColor>
-		<option>black
-		<option>white
 		<option>skyblue
+		<option>white
+		<option>pink
 		<option>lavender
 		<option>goldenrod
 		<option>lightgreen
@@ -54,7 +54,8 @@ function secret(num1, num2, num3)
    </tr>
    <tr>
 	<td><hr width=100%/></td>
-	<td><input type=button name=btnColor value="Change colors" onClick="document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
+	<td><input type=button name=btnColor value="Change colors" onClick="document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
+<!--document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;-->
    </tr>
    <tr>
 	<td>Basic:</td>
