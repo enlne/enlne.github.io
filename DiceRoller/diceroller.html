@@ -3,6 +3,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../style.css" />
 <script>
+
+function goHome()	{window.location.href="../index.html";}
+
 var numSides=0;
 var numDice=0;
 var arrResults=new Array(0,1,2);
@@ -49,7 +52,7 @@ function secret()
 
 <body>
 <form name=frmDice>
-<img src="../Logo.png">
+<img src="../Logo.png" onClick="goHome()">
 
 <center>
 <span class="navbar">

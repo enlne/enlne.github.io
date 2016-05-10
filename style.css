@@ -1,19 +1,14 @@
-
 a{color:0x0000FF !important;}
 a:hover{color:0xFF3300 !important;}
 a:visited{color:0xFFCCCC !important;}
 
-.navbar
-{
-	padding:5px;
+.navbar	{padding:5px;
 	margin-top:20px;
-	display:block;
-}
+	display:block;	}
+
 body    { color:skyblue;
+	background-image: url("starflakes.jpg");
 	background-color:black;	
-	background-image: url("carolBG.jpg");
-	background-attachment: fixed;
-	background-repeat:no-repeat;
 	font-family: "Book Antiqua";
 	font-size:20px;
 	font-weight:700;			}
@@ -22,28 +17,13 @@ h1	{ font-size:75px;
 	font-family:"Book Antiqua";	}
 
 h2	{ font-size:40px;	
-	font-family:"Book Antiqua";
-		
-	}
-
-.name
-{ font-size:75px;
 	font-family:"Book Antiqua";	}
 
-.nameSmall
-{ font-size:40px;	
-	font-family:"Book Antiqua";
-		
-	}
+.lblue	{ color:skyblue;	}
 
-.lblue	{ color:skyblue;
-		  font-style:italic;	}
+.white	{ color:white;	}
 
-.dblue	{ color:darkblue;
-		  font-style:italic;	}
-
-.italic	{ color:black;
-		  font-style:italic;	}
+.italic	{  font-style:italic;	}
 
 ol	{ list-style-type:disc;			}
 

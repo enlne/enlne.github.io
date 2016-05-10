@@ -3,6 +3,9 @@
 <link rel=stylesheet type=text/css href=../style.css>
 <title>Skunk Game</title>
 <script type="text/JavaScript">
+
+function goHome()	{window.location.href="../index.html";}
+
 var pic1=0	//Player 1's picture
 var pic2=0	//Player 2's picture
 var pts1=0	//Player 1's score
@@ -265,7 +268,7 @@ avatarChange()
 <body onLoad="avatarChange()">
 <form name=frmGame>
 
-<img src="../Logo.png">
+<img src="../Logo.png" onClick="goHome()">
 
 <center>
 <span class="navbar">
