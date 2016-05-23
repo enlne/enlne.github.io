@@ -1,23 +1,17 @@
-a{color:0x0000FF !important;}
-a:hover{color:0xFF3300 !important;}
-a:visited{color:0xFFCCCC !important;}
 
 .navbar	{padding:5px;
 	margin-top:20px;
 	display:block;	}
 
-body    { color:skyblue;
-	background-image: url("starflakes.jpg");
-	background-color:black;	
-	font-family: "Book Antiqua";
+body    { color:black;
+	background-color: rgb(89,175,255);	
+	font-family: "Book Antiqua", "Times New Roman";
 	font-size:20px;
 	font-weight:700;			}
 
-h1	{ font-size:75px;
-	font-family:"Book Antiqua";	}
+h1	{ font-size:75px;}
 
-h2	{ font-size:40px;	
-	font-family:"Book Antiqua";	}
+h2	{ font-size:40px;		}
 
 .lblue	{ color:skyblue;	}
 
