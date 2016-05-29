@@ -39,7 +39,7 @@ function goHome()	{window.location.href="../index.html";}
 	else
 	{
 		allTries=allTries + guesses
-		alert("You have run out of guesses! You lose!");
+		alert("You have run out of guesses! You lose! The correct number was "+compNum+".");
 		playNum=playNum+1;
 		frmTemp.txtPlays.value=playNum;
 		lossNum=lossNum+1;
