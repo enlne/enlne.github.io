@@ -34,10 +34,10 @@ function secret()
 
 function avatarChange()	//This function makes the players choose their avatars
 {	
-	var av1=window.prompt("Player 1: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");	//Player 1's avatar
+	var av1=window.prompt("Player 1: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");		//Player 1's avatar
 	a1=av1;
 	if (a1==12) secret();
-	var av2=window.prompt("Player 2: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");	//Player 2's avatar
+	var av2=window.prompt("Player 2: Choose your avatar! Type 1 for Pikachu, 2 for Mudkip, or 3 for Stunfisk.");		//Player 2's avatar
 	a2=av2;
 	if (a2==12) secret();
 	p1Turn(av1);
@@ -48,22 +48,10 @@ function p1Turn()	//this function shows when it's player 1's turn
 {
 	player.innerHTML="It's Player 1's turn!"
 
-	if(a1=="1" || a1==1)
-	{
-		document.imgPlayer.src="pika.bmp"
-	}
-	else if(a1=="2" || a1==2)
-	{
-		document.imgPlayer.src="mudkip.bmp"
-	}
-	else if(a1=="3" || a1==3)
-	{
-		document.imgPlayer.src="stunfisk.bmp"
-	}
-	else
-	{
-		document.imgPlayer.src="fail.bmp"
-	}
+	if(a1=="1" || a1==1)	{document.imgPlayer.src="pika.bmp"}
+	else if(a1=="2" || a1==2)	{document.imgPlayer.src="mudkip.bmp"}
+	else if(a1=="3" || a1==3)	{document.imgPlayer.src="stunfisk.bmp"}
+	else	{document.imgPlayer.src="fail.bmp"}
 }
 
 
@@ -71,22 +59,10 @@ function p2Turn()	//this function shows when it is player 2's turn
 {
 	player.innerHTML="It's Player 2's turn!"
 	
-	if(a2=="1" || a2==1)
-	{
-		document.imgPlayer.src="pika2.bmp"
-	}
-	else if(a2=="2" || a2==2)
-	{
-		document.imgPlayer.src="mudkip2.bmp"
-	}
-	else if(a2=="3" || a2==3)
-	{
-		document.imgPlayer.src="stunfisk2.bmp"
-	}
-	else
-	{
-		document.imgPlayer.src="fail2.bmp"
-	}
+	if(a2=="1" || a2==1)	{document.imgPlayer.src="pika2.bmp"}
+	else if(a2=="2" || a2==2)	{document.imgPlayer.src="mudkip2.bmp"}
+	else if(a2=="3" || a2==3)	{document.imgPlayer.src="stunfisk2.bmp"}
+	else	{document.imgPlayer.src="fail2.bmp"}
 }
 
 function showInstructions()	//self-explanatory
@@ -231,9 +207,6 @@ function checkScore()	//sees if a player has won
 
 
 
-
-
-
 function resetGame()	//resets the game!
 {
 pic1=0	
@@ -251,14 +224,9 @@ Messages.innerHTML="It is Player 1's turn. Roll the dice."
 Score1.innerHTML="Player 1: 0"
 Score2.innerHTML="Player 2: 0"
 
-
 avatarChange()
 
-
 }
-
-
-
 
 
 
@@ -275,7 +243,7 @@ avatarChange()
 	<a href="../index.html">Home</a>
 	<a href="../aboutme.html">About Me</a>
 	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
-	<a href="../things.html">Things</a>
+	<a href="../features.html">Features</a>
 </span>
 </center>
 
