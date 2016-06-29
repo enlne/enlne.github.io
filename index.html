@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>ENLNE | Index</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script>
 function secret()
@@ -18,14 +19,20 @@ else window.location.href="fail.html";
 <body>
 <img src="Logo.png" onClick="secret()";>
 
-<center>
-<span class="navbar">
-	<a href="index.html">Home</a>
-	<a href="aboutme.html">About Me</a>
-	<a href="Resume_v2.pdf">R&eacute;sum&eacute;</a>
-	<a href="features.html">Features</a>
-</span>
+<ul>
+	<li><a class="active" href="index.html">Home</a></li>
+	<li><a href="aboutme.html">About</a></li>
+	<li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+	<li class="dropdown">	<a href="features.html" class="dropbtn">Features</a>
+    		<div class="dropdown-content">
+      		<a href="Calculator/calculator.html">Calculator</a>
+		<a href="DiceRoller/diceroller.html">Dice Rollers</a>
+		<a href="GuessNumber/guessnumber.html">Number Guessing Game</a>
+		<a href="SkunkGame/skunkgame.html">Two-player Skunk Game</a>
+    		</div> 	</li>
+</ul>
 <br/>
+<center>
 <img src="profile.jpg" height=250>  
 </center>
 
@@ -33,7 +40,7 @@ else window.location.href="fail.html";
 <br/>
 
 Disclaimer: Work in progress. <br/>
-Secret portal has arrived. Password currently has 6 parts. <br/>
+Secret portal has arrived. Password currently has 6 parts. Navigation bar fancified.<br/>
 The first part is 5
 
 </body>

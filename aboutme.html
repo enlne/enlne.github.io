@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>ENLNE | About</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script>
 function goHome()	{window.location.href="index.html";}
@@ -9,16 +10,23 @@ function goHome()	{window.location.href="index.html";}
 
 <body>
 <img src="Logo.png" onClick="goHome()";>
-<center>
-<span class="navbar">
-	<a href="index.html">Home</a>
-	<a href="aboutme.html">About Me</a>
-	<a href="Resume_v2.pdf">R&eacute;sum&eacute;</a>
-	<a href="features.html">Features</a>
-</span>
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a class="active" href="aboutme.html">About</a></li>
+	<li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+	<li class="dropdown">	<a href="features.html" class="dropbtn">Features</a>
+    		<div class="dropdown-content">
+      		<a href="Calculator/calculator.html">Calculator</a>
+		<a href="DiceRoller/diceroller.html">Dice Rollers</a>
+		<a href="GuessNumber/guessnumber.html">Number Guessing Game</a>
+		<a href="SkunkGame/skunkgame.html">Two-player Skunk Game</a>
+    		</div> 	</li>
+</ul>
 <br/>
+<center>
 <img src="profile.jpg" height=250>  
 </center>
+
 <br/>
 I'm Ellen Ni, a current student at the <a href=http://illinois.edu>University of Illinois at Urbana-Champaign</a>,  majoring in computer science. This summer I'm interning at <a href=http://www.broadviewcomm.com>Broadview Communications</a>.
 <br/><br/>

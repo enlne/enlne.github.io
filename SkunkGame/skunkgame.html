@@ -1,5 +1,6 @@
 <html><!--Created by Ellen Ni-->
 <head>
+<title>ENLNE | Skunk Game</title>
 <link rel=stylesheet type=text/css href=../style.css>
 <title>Skunk Game</title>
 <script type="text/JavaScript">
@@ -67,7 +68,7 @@ function p2Turn()	//this function shows when it is player 2's turn
 
 function showInstructions()	//self-explanatory
 {
-	Instructions.innerHTML="To win this game, you roll the dice to try to be the first to get to 100 points. To do this, press the button that says \"Roll Dice.\" There is also a button that says \"Pass Turn,\" which will allow you to end your turn and put your winnings for the round into your total points. Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round, and your turn automatically ends. If you get 2 skunks, your TOTAL points are reset to zero.<br/>Good luck ;) "
+	Instructions.innerHTML="To win this game, you roll the dice to try to be the first to get to 100 points. To do this, press the button that says \"Roll Dice.\" There is also a button that says \"Pass Turn,\" which will allow you to end your turn and put your winnings for the round into your total points.<br><br> Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round, and your turn automatically ends. If you get 2 skunks, your TOTAL points are reset to zero.<br><br/>Good luck ;) "
 }
 
 function hideInstructions()	//see above
@@ -238,20 +239,24 @@ avatarChange()
 
 <img src="../Logo.png" onClick="goHome()">
 
-<center>
-<span class="navbar">
-	<a href="../index.html">Home</a>
-	<a href="../aboutme.html">About Me</a>
-	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
-	<a href="../features.html">Features</a>
-</span>
-</center>
-
+<ul>
+	<li><a href="../index.html">Home</a></li>
+	<li><a href="../aboutme.html">About</a></li>
+	<li><a href="../resume.html">R&eacute;sum&eacute;</a></li>
+	<li class="dropdown">	<a href="../features.html" class="dropbtn-active">Features</a>
+    		<div class="dropdown-content">
+      		<a href="../Calculator/calculator.html">Calculator</a>
+		<a href="../DiceRoller/diceroller.html">Dice Rollers</a>
+		<a href="../GuessNumber/guessnumber.html">Number Guessing Game</a>
+		<a href="skunkgame.html">Two-player Skunk Game</a>
+    		</div> 	</li>
+</ul>
+<br/>
 
 <center>
 <h2>Skunk Game</h2>
 <div id=Instructions>
-To win, you roll the dice to be the first to get to 100 points. Press the button that says "Roll Dice" to generate winnings for a round. The button that says "Pass Turn" will allow you to end your turn and put your winnings for the round into your total points. <br/>Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round and your turn ends. If you get 2 skunks, your TOTAL points are reset to zero and your turn ends.<br/>Good luck ;)
+To win, you roll the dice to be the first to get to 100 points. Press the button that says "Roll Dice" to generate winnings for a round. The button that says "Pass Turn" will allow you to end your turn and put your winnings for the round into your total points. <br/><br/>Be warned, instead of a 1, there is a skunk on the die. If you get 1 skunk, you get zero points for that round and your turn ends. If you get 2 skunks, your TOTAL points are reset to zero and your turn ends.<br/><br/>Good luck ;)
 </div>
 
 <input type=button name=btnSI value="Show Instructions" onClick="showInstructions()">

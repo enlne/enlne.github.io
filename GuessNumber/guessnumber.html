@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>ENLNE | Number Guessing Game</title>
 <link rel=stylesheet type=text/css href=../style.css>
 <title>Thinking of a Number Game</title>
 <script>
@@ -116,11 +117,11 @@ function goHome()	{window.location.href="../index.html";}
   }
   function hideInfo()
   {
-	textInfo.innerHTML=""
+	textInfo.innerHTML="";
   }
   function showInfo()
   {
-	textInfo.innerHTML="Instructions: You have 6 guesses to guess a random computer generated number from 1-100. After each guess you will be told if your guess is right or wrong. If it is wrong, you will be told to guess higher or guess lower. Click the START button to begin the game. Once the game has begun, you do not need to click the START button again."
+	textInfo.innerHTML="You have 6 tries to guess a number from 1-100. <br>You will be told if your guess is right or wrong. <br>If it was wrong, you'll be told to guess higher or guess lower. <br>Click START to begin the game. You only need to do this once. <br>"
   }
 </script>
 </head>
@@ -130,17 +131,25 @@ function goHome()	{window.location.href="../index.html";}
 <form name=frmGame>
 <img src="../Logo.png" onClick="goHome()">
 
-<center>
-<span class="navbar">
-	<a href="../index.html">Home</a>
-	<a href="../aboutme.html">About Me</a>
-	<a href="../Resume_v2.pdf">R&eacute;sum&eacute;</a>
-	<a href="../features.html">Features</a>
-</span>
-</center>
+<ul>
+	<li><a href="../index.html">Home</a></li>
+	<li><a href="../aboutme.html">About</a></li>
+	<li><a href="../resume.html">R&eacute;sum&eacute;</a></li>
+	<li class="dropdown">	<a href="../features.html" class="dropbtn-active">Features</a>
+    		<div class="dropdown-content">
+      		<a href="../Calculator/calculator.html">Calculator</a>
+		<a href="../DiceRoller/diceroller.html">Dice Rollers</a>
+		<a href="guessnumber.html">Number Guessing Game</a>
+		<a href="../SkunkGame/skunkgame.html">Two-player Skunk Game</a>
+    		</div> 	</li>
+</ul>
 
-</br>
-<div id=textInfo>	Instructions: You have 6 guesses to guess a random computer generated number from 1-100. After each guess you will be told if your guess is right or wrong. If it is wrong, you will be told to guess higher or guess lower. Click the START button to begin the game. Once the game has begun, you do not need to click the START button again.
+<br/>
+<div id=textInfo>	
+You have 6 tries to guess a number from 1-100. <br>
+You will be told if your guess is right or wrong. <br>
+If it was wrong, you'll be told to guess higher or guess lower. <br>
+Click START to begin the game. You only need to do this once. <br>
 </div>
 <input type=button name=btnHideInfo value="Hide Instructions" onClick="hideInfo()" />
 <input type=button name=btnShowInfo value="Show Instructions" onClick="showInfo()" />
