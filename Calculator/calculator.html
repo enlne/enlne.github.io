@@ -63,7 +63,7 @@ function goHome()	{window.location.href="../index.html";}
 				</select></td>
    </tr>
    <tr>
-	<td><hr width=100%/></td>
+	<td><hr width=93%/></td>
 	<td><input type=button name=btnColor value="Change colors" onClick="document.body.style.color=frmCalc.slctFontColor.options[frmCalc.slctFontColor.selectedIndex].text">
 <!--document.body.style.backgroundColor=frmCalc.slctBGColor.options[frmCalc.slctBGColor.selectedIndex].text;-->
    </tr>
@@ -75,7 +75,7 @@ function goHome()	{window.location.href="../index.html";}
    
    <tr>
 	<td>Number Pads:</td>
-	<td>First Number:<br/>
+	<td>First Number<br/>
 	<input type=button name=btnNum11 value=" 1 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '1'">
 	<input type=button name=btnNum12 value=" 2 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '2'">
 	<input type=button name=btnNum13 value=" 3 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '3'"><br/>
@@ -88,7 +88,7 @@ function goHome()	{window.location.href="../index.html";}
 	<input type=button name=btnNum10 value=" 0 " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '0'">
 	<input type=button name=btnNum1 value=" . " onClick="frmCalc.txtNum1.value=frmCalc.txtNum1.value + '.'">
 	<input type=button name=btnNum1C value=" C " onClick="frmCalc.txtNum1.value=''"></td>
-	<td>Second Number:<br/>
+	<td>Second Number<br/>
 	<input type=button name=btnNum21 value=" 1 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '1'">
 	<input type=button name=btnNum22 value=" 2 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '2'">
 	<input type=button name=btnNum23 value=" 3 " onClick="frmCalc.txtNum2.value=frmCalc.txtNum2.value + '3'"><br/>
@@ -118,7 +118,7 @@ function goHome()	{window.location.href="../index.html";}
 	<td><input type=text name=txtAnswer size=20></td>
    </tr>
    <tr>
-	<td>Complex:</td>
+	<td>Modifiers:</td>
 	<td><img src="SqRt.jpg" name=btnSqRt onMouseOver="this.src='SqRtOn.jpg'" onMouseOut="this.src='SqRt.jpg'" onClick="Number=Math.sqrt(parseFloat(Number)); frmCalc.txtModAnswer.value=Number">
 	<img src="SecondPwr.jpg" name=btnSecondPower onMouseOver="this.src='SecondPwrOn.jpg'" onMouseOut="this.src='SecondPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 2); frmCalc.txtModAnswer.value=Number">
 	<img src="FifthPwr.jpg" name=btnFifthPower onMouseOver="this.src='FifthPwrOn.jpg'" onMouseOut="this.src='FifthPwr.jpg'" onClick="Number=Math.pow(parseFloat(Number), 5); frmCalc.txtModAnswer.value=Number">
