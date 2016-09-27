@@ -32,7 +32,7 @@ ul 		{
   		  margin: 0;
   		  padding: 0;
  		  overflow: hidden;
- 		  background-color:  rgb(0,124,236);
+ 		  background-color:  rgb(92,29,209);
 		}
 
 li 		{
@@ -53,14 +53,14 @@ li a, .dropbtn 	{
    		 text-align: center;
   		 padding: 14px 16px;
   		 text-decoration: none;
-		 background-color: rgb(0,79,185);
+		 background-color: rgb(61,19,136);
 		}
 
 
 li a:hover, .dropdown:hover .dropbtn
 		 {
 		color:white;
-   		 background-color:  rgb(0,79,185);
+   		 background-color:  rgb(61,19,136);
 		}
 
 li.dropdown	{display: inline-block;}
@@ -68,7 +68,7 @@ li.dropdown	{display: inline-block;}
 .dropdown-content {
 		display:none;
 		position: absolute;
-		background-color: rgb(128,194,255);
+		background-color: rgb(133,81,230);
 		min-width:160px;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		}
@@ -83,7 +83,7 @@ li.dropdown	{display: inline-block;}
 		}
 
 .dropdown-content a:hover {
-		background-color:rgb(0,132,255);
+		background-color:rgb(61,19,136);
 		}
 
 .dropdown:hover .dropdown-content {
@@ -91,5 +91,6 @@ li.dropdown	{display: inline-block;}
 		}
 
 .active 	{
-  		  background-color: rgb(0,79,185);
+  		  background-color: rgb(61,19,136);
+		  color: lightgray;
 		}
