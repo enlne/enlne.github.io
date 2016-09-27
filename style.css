@@ -49,7 +49,7 @@ li a, .dropbtn 	{
 
 .dropbtn-active	{
   		 display: block;
-  		 color:  black;
+  		 color: lightgray;
    		 text-align: center;
   		 padding: 14px 16px;
   		 text-decoration: none;
